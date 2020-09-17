@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Relatives>
+
+    <Person>
+        <Relationship>Friend</Relationship>
+        <first_name>Alex</first_name>
+        <last_name>Booo</last_name>
+        <age>45</age>
+        <department role="conductor">Public Transportation</department>
+        <where_person_lives>LA</where_person_lives>
+    </Person>
+    <Person>
+        <Relationship>Friend</Relationship>
+        <first_name>Boris</first_name>
+        <last_name>Fooo</last_name>
+        <age>42</age>
+        <department role="driver">Public Transportation</department>
+        <where_person_lives>LA</where_person_lives>
+    </Person>
+    
+</Relatives>

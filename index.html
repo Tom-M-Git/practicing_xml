@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing XML</title>
+</head>
+<body>
+    
+
+    <script>
+        let xmlObject, docObject, name, role, department;
+        xmlObject = new XMLHttpRequest();
+        xmlObject.open("GET", "practicing_xml.xml", false);
+        xmlObject.send();
+        docObject = xmlObject.responseXML;
+        personArray = docObject.getElementsByTagName("Person");
+        for(let i=0;i<personArray.length; i++){
+            name = docObject.getElementsByTagName("first_name")[i].childNodes[0].nodeValue;
+            document.write("Name = " + name + "<br/>");
+
+            role = docObject.getElementsByTagName("department")[i].getAttribute("role");
+            department = docObject.getElementsByTagName("department")[i].childNodes[0].nodeValue;
+            document.write("Position = " + role + " in " + department + "<br/>------------------<br/>");
+        }
+    </script>
+</body>
+</html>

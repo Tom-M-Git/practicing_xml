@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>location.pathname = "en/index.html";
+    <script>let currentPath = location.pathname;
+            let newPath = currentPath.replace(/index.*/i, "en/index.html");
+            location.pathname = newPath;
             setTimeout(()=>{
                 window.open("./en/index.html", "_self");
                 document.getElementsByTagName("body")[0].innerHTML = "Home =&gt; <a href='./en/index.html'>en/index.html</a>";

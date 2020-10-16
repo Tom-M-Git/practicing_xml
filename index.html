@@ -6,10 +6,10 @@
     <title>Document</title>
     <script>let currentPath = location.pathname;
             let newPath = currentPath.replace(/index.*/i, "en/index.html");
-            location.pathname = newPath;
+            //location.pathname = newPath;
             console.log(currentPath, newPath);
             setTimeout(()=>{
-                window.open("./en/index.html", "_self");
+                //window.open("./en/index.html", "_self");
                 document.getElementsByTagName("body")[0].innerHTML = "Home =&gt; <a href='./en/index.html'>en/index.html</a>";
             }, 2000);
     </script>

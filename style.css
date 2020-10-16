@@ -1,0 +1,13 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#header {
+    min-height: 5rem;
+    background-color: lightgray;
+}
+#footer {
+    min-height: 10rem;
+    background-color: darkgray;
+} */

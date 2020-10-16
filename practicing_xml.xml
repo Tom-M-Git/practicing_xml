@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+<!DOCTYPE Relatives SYSTEM "practicing_xml.dtd">
 <Relatives>
 
     <Person>
@@ -18,5 +19,13 @@
         <department role="driver">Public Transportation</department>
         <where_person_lives>LA</where_person_lives>
     </Person>
-    
+    <Person>
+        <Relationship>Acquaintance</Relationship>
+        <first_name>John</first_name>
+        <last_name>Dooe</last_name>
+        <age>42</age>
+        <department role="manager">Sales</department>
+        <where_person_lives>US</where_person_lives>
+    </Person>
+
 </Relatives>

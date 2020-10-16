@@ -1,0 +1,10 @@
+{
+    "values":{
+        "title":"タイトル",
+        "header":"ヘッダー",
+        "footer":"フッター",
+        "home":"HOME",
+        "link":"リンク",
+        "disabled":"使用不可"
+    }
+}

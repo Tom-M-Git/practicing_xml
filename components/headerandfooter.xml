@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<components>
+    <header>
+        <div class="jumbotron jumbotron-fluid mb-2">
+            <div class="container">
+                <h1 class="display-4"><span data-i18n="title">Title</span></h1>
+                <p class="lead"><span data-i18n="header">Header</span></p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a class="nav-link active" href="#"><span data-i18n="home">Home</span></a>
+            <a class="nav-link" href="#"><span data-i18n="link">Link</span></a>
+            <a class="nav-link" href="#"><span data-i18n="link">Link</span></a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><span data-i18n="disabled">Disabled</span></a>
+        </nav>
+    </header>
+    <footer class="bg-dark">
+        <div class="container text-light">
+            <h1><span data-i18n="footer">Footer</span></h1>
+        </div>
+    </footer>
+</components>

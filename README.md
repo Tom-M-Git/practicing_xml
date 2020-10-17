@@ -1,2 +1,2 @@
-# Learning introductory XML
-visually representing just a little of XML data on browser with Javascript.
+# Learning implementing XML with AJAX and i18n
+Creating multiple web components in __xml__ and loading into DOM, learning to handle seperate js files with multiple __AJAX__, while also testing __i18n__ with library `i18njs`.

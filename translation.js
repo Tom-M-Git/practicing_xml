@@ -11,7 +11,7 @@ function httpRequest(method, url){
     xhr.onreadystatechange =()=>{
         if(xhr.readyState === 4 && xhr.status === 200){
             jsonData = JSON.parse(xhr.responseText); console.log(jsonData);
-            getElementsToTranslate();
+            checkComponents();
         }
     }
     xhr.open(method, url, true);
@@ -40,14 +40,26 @@ function bulkTranslateFunc (passedElementsToTranslate) {
     }
 }
 /* -------------- */
-// function linstenToComponents(callbackFunc){
-//     let componentsStatus = document.querySelector("script[data-components]");
-//     console.log(componentsStatus.getAttribute("data-components"));
-//     if(componentsStatus.getAttribute("data-components") == "on"){
-//         callbackFunc();
-//     }
-// }
 function getElementsToTranslate(){
     let gotElementsToTranslate = document.querySelectorAll("[data-i18n]");
     bulkTranslateFunc(gotElementsToTranslate);
+}
+function checkComponents(){
+    mediator.registerListener(()=>{
+        if(mediator.componentsLoaded >= mediator.numOfComponentFiles){
+            getElementsToTranslate();
+        }
+    });
+    mediator.componentsAdded = 0;
+    setTimeout(()=>{
+        if(!(mediator.componentsLoaded >= mediator.numOfComponentFiles)){
+            let errorMeassage = document.createElement("div");
+            errorMeassage.style.position = "fixed";
+            errorMeassage.style.backgroundColor = "#ffffff";
+            errorMeassage.style.textAlign = "center";
+            errorMeassage.innerHTML = "<h1>Failed to load content or taking too long.</h1><p>Try reloading the page or disable a script blocker if you have one.</p>";
+            document.getElementsByTagName("body")[0].prepend(errorMeassage);
+        }
+        console.log("checking components timed out");
+    }, 5000);
 }

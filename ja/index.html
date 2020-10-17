@@ -14,7 +14,14 @@
         <h1>This is main content</h1>
     </main>
     <footer id="footer"></footer>
-    <script src="../components.js" data-components="off"></script>
+    <script>
+        let mediator = {
+            "numOfComponentFiles":1, "componentsLoaded":0, "listener":function(){},
+            "registerListener": function(newListener){this.listener = newListener;},
+            set componentsAdded(val){this.componentsLoaded += val; this.listener();}
+        }
+    </script>
+    <script src="../components.js"></script>
     <script src="../translation.js"></script>
 </body>
 </html>

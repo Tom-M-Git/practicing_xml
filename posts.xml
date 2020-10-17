@@ -27,6 +27,24 @@
                     <author>Tomoaki Morioka</author>
                     <title>Hi</title>
                     <description>How are you</description>
+                    <body>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <h1>Dolores nam tempore id eum sapiente nulla beatae vero.</h1></body>
+                </en>
+                <ja>
+                    <pubDate></pubDate>
+                    <author>森岡 知映</author>
+                    <title>やあ</title>
+                    <description>調子は</description>
+                    <body>日本語Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos et officia placeat, ea repellendus voluptates ipsa quas explicabo accusamus nesciunt sunt perferendis minima quibusdam maxime nemo id enim cumque cum?</body>
+                </ja>
+            </language>
+        </item>
+        <item>
+            <language>
+                <en>
+                    <pubDate></pubDate>
+                    <author>Tomoaki Morioka</author>
+                    <title>Hi</title>
+                    <description>How are you</description>
                     <body>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! Dolores nam tempore id eum sapiente nulla beatae vero.</body>
                 </en>
                 <ja>

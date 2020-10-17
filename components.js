@@ -20,11 +20,5 @@ function getFooter () {
     document.getElementById("footer").outerHTML = gotFooter[0].outerHTML;
 }
 function loadComponents () {
-    getHeader();getFooter();
-    if(getElementsToTranslate){
-        getElementsToTranslate();
-    }
-    //let componentsStatus = document.querySelector("script[data-components]");
-    //componentsStatus.setAttribute("onChange", getElementsToTranslate());
-    //componentsStatus.setAttribute("data-components", "on");
+    getHeader();getFooter();mediator.componentsAdded=1;
 }

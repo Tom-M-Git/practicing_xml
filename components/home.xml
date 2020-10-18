@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<components>
+    <main lang="en">
+        <div id="about-header" class="container bg-light border-top border-bottom">
+            <h1>About</h1>
+        </div>
+        <div class="article container mt-5">
+            <h2>Welcome</h2>
+            <hr/>
+            <p>This is a mock website built as my personal project.<br/>
+            It is focused on<em>i18n (Internationalization)</em> with the help of a library <code>i18njs</code>.
+            </p>
+        </div>
+        <div class="article container mt-5">
+            <h2>Technical Detail</h2>
+            <hr/>
+            <p>Built with: <code>Bootstrap</code>, <code>18njs</code>, <code>XML</code></p>
+        </div>
+        <div class="container">
+            <hr/>
+            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-18">Oct 18, 2020</span>
+        </div>
+    </main>
+    <main lang="ja">
+        <div id="about-header" class="container bg-light border-top border-bottom">
+            <h1 class="my-1">概要</h1>
+        </div>
+        <div id="article" class="container mt-5">
+            <h2>ようこそ</h2>
+            <hr/>
+            <p>This is a mock website built as my personal project.<br/>
+            It is focused on <em>i18n (Internationalization)</em> with the help of a library <code>i18njs</code>.
+            </p>
+        </div>
+        <div class="container">
+            <hr/>
+            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-18">Oct 18, 2020</span>
+        </div>
+    </main>
+</components>

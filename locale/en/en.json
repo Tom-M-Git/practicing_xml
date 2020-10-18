@@ -1,3 +1,6 @@
 {
-    "values":""
+    "values":{
+        "japanese":"日本語",
+        "%{YYYY}%{MM}%{DD}":"%{MM}/%{DD}/%{YYYY}"
+    }
 }

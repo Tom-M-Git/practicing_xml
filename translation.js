@@ -37,7 +37,23 @@ function bulkTranslateFunc (passedElementsToTranslate) {
                 }
             }
         }
+        let datesToFormat = document.querySelectorAll("[data-i18n-date]");
+        datesToFormat.forEach((eachDate)=>{
+            let dateValue = eachDate.getAttribute("data-i18n-date").split("-");
+            eachDate.innerHTML = 
+                i18n("%{YYYY}%{MM}%{DD}", {
+                    "YYYY":dateValue[0],
+                    "MM":dateValue[1],
+                    "DD":dateValue[2]
+                });
+        });
     }
+    let clock = document.getElementById("date-and-time");
+    setInterval(()=>{
+        let currentDate = new Date();
+        let formattedDate = currentDate.toLocaleDateString(langAttr, {year:"numeric", month:"long", day: 'numeric', weekday:"long", hour: '2-digit', minute:"2-digit", second:"2-digit", hour12:"true"});
+        clock.innerHTML = formattedDate;
+    }, 1000);
 }
 /* -------------- */
 function getElementsToTranslate(){

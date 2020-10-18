@@ -2,22 +2,31 @@
 
 <components>
     <header>
-        <div class="jumbotron jumbotron-fluid mb-2">
-            <div class="container">
-                <h1 class="display-4"><span data-i18n="title">Title</span></h1>
-                <p class="lead"><span data-i18n="header">Header</span></p>
+        <div class="jumbotron jumbotron-fluid mb-2 pb-4">
+            <div class="container text-center text-md-left">
+                <h1 class="display-4"><span class="font-weight-bolder" data-i18n="title">Web Components with XML and i18n</span></h1>
+                <p class="lead"><span data-i18n="subtitle">A mock website project</span></p>
+            </div>
+            <div class="mx-auto w-75 bg-light d-flex flex-wrap justify-content-center shadow text-nowrap rounded-pill py-2 px-3" style="max-width:550px">
+                <div class="mr-1"><span class="text-muted" data-i18n="current-date-and-time">Current Date and Time:</span></div>
+                <div><span class="text-info" id="date-and-time"></span></div>
             </div>
         </div>
-        <nav class="nav">
-            <a class="nav-link active" href="#"><span data-i18n="home">Home</span></a>
-            <a class="nav-link" href="#"><span data-i18n="link">Link</span></a>
-            <a class="nav-link" href="#"><span data-i18n="link">Link</span></a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><span data-i18n="disabled">Disabled</span></a>
+        <nav class="nav justify-content-between">
+            <ul id="links" class="nav">
+                <li class="nav-item"><a class="nav-link active" href="#"><span data-i18n="home">Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span data-i18n="posts">Posts</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><span data-i18n="disabled">Disabled</span></a></li>
+            </ul>
+            <ul id="languages" class="nav">
+                <li class="nav-item"><a class="nav-link" href="../en/index.html"><span data-i18n="english">English</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="../ja/index.html"><span data-i18n="japanese">Japanese</span></a></li>
+            </ul>
         </nav>
     </header>
-    <footer class="bg-dark">
-        <div class="container text-light">
-            <h1><span data-i18n="footer">Footer</span></h1>
+    <footer class="bg-dark mt-5 py-3" style="min-height:10rem">
+        <div class="container text-light text-center">
+            <p>&#169; 2020 by <span data-i18n="Tomoaki Morioka">Tomoaki Morioka</span>—Japan. All Rights Reserved.</p>
         </div>
     </footer>
 </components>

@@ -16,12 +16,13 @@
     <footer id="footer"></footer>
     <script>
         let mediator = {
-            "numOfComponentFiles":1, "componentsLoaded":0, "listener":function(){},
+            "numOfComponentFiles":2, "componentsLoaded":0, "listener":function(){},
             "registerListener": function(newListener){this.listener = newListener;},
             set componentsAdded(val){this.componentsLoaded += val; this.listener();}
         }
     </script>
     <script src="../components.js"></script>
+    <script src="../home.js"></script>
     <script src="../translation.js"></script>
 </body>
 </html>

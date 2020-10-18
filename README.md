@@ -1,2 +1,2 @@
-# Learning implementing XML with AJAX and i18n
+# Learning implementing XML with AJAX alongside i18n
 Creating multiple web components in __xml__ and loading into DOM, learning to handle seperate js files with multiple __AJAX__, while also testing __i18n__ with library `i18njs`.

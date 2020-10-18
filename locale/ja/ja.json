@@ -1,10 +1,17 @@
 {
     "values":{
-        "title":"タイトル",
+        "title":"XMLコンポーネントとi18n",
         "header":"ヘッダー",
         "footer":"フッター",
+        "subtitle":"模擬ウェブサイトプロジェクト",
         "home":"HOME",
+        "posts":"記事",
+        "japanese":"日本語",
         "link":"リンク",
-        "disabled":"使用不可"
+        "disabled":"使用不可",
+        "Tomoaki Morioka":"森岡 知映",
+        "last-modified":"最終更新日",
+        "%{YYYY}%{MM}%{DD}":"%{YYYY}年%{MM}月%{DD}日",
+        "current-date-and-time":"現在日付時刻:"
     }
 }

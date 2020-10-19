@@ -2,7 +2,7 @@
 
 <components>
     <main lang="en">
-        <div id="about-header" class="container bg-light border-top border-bottom">
+        <div id="page-header" class="container bg-light border-top border-bottom">
             <h1>About</h1>
         </div>
         <div class="article container mt-5">
@@ -19,7 +19,7 @@
         </div>
         <div class="container">
             <hr/>
-            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-18">Oct 18, 2020</span>
+            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-19">Oct 19, 2020</span>
         </div>
     </main>
     <main lang="ja">

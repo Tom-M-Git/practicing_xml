@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../i18n.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header"></header>
+    <main id="main">
+        <h1>This is main content</h1>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+        let mediator = {
+            "numOfComponentFiles":2, "componentsLoaded":0, "listener":function(){},
+            "registerListener": function(newListener){this.listener = newListener;},
+            set componentsAdded(val){this.componentsLoaded += val; this.listener();}
+        }
+    </script>
+    <script src="../components.js"></script>
+    <script src="../posts.js"></script>
+    <script src="../translation.js"></script>
+</body>
+</html>

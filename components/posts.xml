@@ -1,60 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <root>
-    <posts>
-        <item>
-            <language>
-                <en>
-                    <pubDate></pubDate>
-                    <author>Tomoaki Morioka</author>
-                    <title>Hi</title>
-                    <description>How are you</description>
-                    <body>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <h1>Dolores nam tempore id eum sapiente nulla beatae vero.</h1></body>
-                </en>
-                <ja>
-                    <pubDate></pubDate>
-                    <author>森岡 知映</author>
-                    <title>やあ</title>
-                    <description>調子は</description>
-                    <body>日本語Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos et officia placeat, ea repellendus voluptates ipsa quas explicabo accusamus nesciunt sunt perferendis minima quibusdam maxime nemo id enim cumque cum?</body>
-                </ja>
-            </language>
-        </item>
-        <item>
-            <language>
-                <en>
-                    <pubDate></pubDate>
-                    <author>Tomoaki Morioka</author>
-                    <title>Hi</title>
-                    <description>How are you</description>
-                    <body>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <h1>Dolores nam tempore id eum sapiente nulla beatae vero.</h1></body>
-                </en>
-                <ja>
-                    <pubDate></pubDate>
-                    <author>森岡 知映</author>
-                    <title>やあ</title>
-                    <description>調子は</description>
-                    <body>日本語Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos et officia placeat, ea repellendus voluptates ipsa quas explicabo accusamus nesciunt sunt perferendis minima quibusdam maxime nemo id enim cumque cum?</body>
-                </ja>
-            </language>
-        </item>
-        <item>
-            <language>
-                <en>
-                    <pubDate></pubDate>
-                    <author>Tomoaki Morioka</author>
-                    <title>Hi</title>
-                    <description>How are you</description>
-                    <body>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! Dolores nam tempore id eum sapiente nulla beatae vero.</body>
-                </en>
-                <ja>
-                    <pubDate></pubDate>
-                    <author>森岡 知映</author>
-                    <title>やあ</title>
-                    <description>調子は</description>
-                    <body>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos et officia placeat, ea repellendus voluptates ipsa quas explicabo accusamus nesciunt sunt perferendis minima quibusdam maxime nemo id enim cumque cum?</body>
-                </ja>
-            </language>
-        </item>
+    <posts year="2020">
+        <post date="2020-10-19T00:20:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body>
+                    <p>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <strong>Dolores nam tempore id eum sapiente nulla beatae vero.</strong></p>
+                </body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今回は例のイベントが行われたため、手本の文例を準備して例の場所まで移動。代用文のおかげでコンテンツのプレースホルダーの作成に成功。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-18T17:00:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body><p>Lorem ipsum dolor sit amet <em>consectetur</em> adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! <strong>Dolores nam tempore id eum sapiente nulla beatae vero.</strong></p></body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今回は例のイベントが行われたため、手本の文例を準備して例の場所まで移動。代用文のおかげでコンテンツのプレースホルダーの作成に成功。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
+        <post date="2020-10-17T21:00:00Z" author="Tomoaki Morioka">
+            <item lang="en">
+                <title>Hi</title>
+                <description>How are you</description>
+                <body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error, maiores explicabo saepe dolorem rerum labore, ullam laboriosam sapiente odio perferendis! Dolores nam tempore id eum sapiente nulla beatae vero.</p></body>
+            </item>    
+            <item lang="ja">    
+                <title>やあ</title>
+                <description>調子は</description>
+                <body><p>日本語の例文。今回は例のイベントが行われたため、手本の文例を準備して例の場所まで移動。代用文のおかげでコンテンツのプレースホルダーの作成に成功。例のローレムイプサムの長文例を全てカタカナで表記する代わりに、代用文のプレースホルダーを代わりに例文として例のページに例の方法で投稿した。この記事に大した意味は無く、単なる例でしかない。</p></body>
+            </item>
+        </post>
     </posts>
 </root>

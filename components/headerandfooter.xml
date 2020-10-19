@@ -14,8 +14,8 @@
         </div>
         <nav class="nav justify-content-between">
             <ul id="links" class="nav">
-                <li class="nav-item"><a class="nav-link active" href="#"><span data-i18n="home">Home</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span data-i18n="posts">Posts</span></a></li>
+                <li class="nav-item"><a class="nav-link active" href="./index.html"><span data-i18n="home">Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="./posts.html"><span data-i18n="posts">Posts</span></a></li>
                 <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><span data-i18n="disabled">Disabled</span></a></li>
             </ul>
             <ul id="languages" class="nav">

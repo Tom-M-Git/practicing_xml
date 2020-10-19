@@ -41,11 +41,13 @@ function postsCode(){
             `
         });
 
-        document.getElementById("main").innerHTML = `
-            <div id="page-header" class="container bg-light border-top border-bottom">
-                <h1 class="my-1"><span data-i18n="posts">Posts</span></h1>
-            </div>
-            <section id="posts" class="container mt-5">${postOutput}</section>
+        document.getElementById("main").outerHTML = `
+            <main id="main" class="bg-white" style="position:relative">
+                <div id="page-header" class="container bg-light border-top border-bottom">
+                    <h1 class="my-1"><span data-i18n="posts">Posts</span></h1>
+                </div>
+                <section id="posts" class="container mt-5">${postOutput}</section>
+            </main>
         `;
     }
     function loadComponents () {

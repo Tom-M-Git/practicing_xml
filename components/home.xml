@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <components>
-    <main lang="en">
+    <main lang="en" class="bg-white" style="position:relative">
         <div id="page-header" class="container bg-light border-top border-bottom">
             <h1>About</h1>
         </div>

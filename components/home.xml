@@ -26,14 +26,33 @@
             <h2>Technical Details</h2>
             <hr/>
             <p>
-                Built with: <code>HTML</code>, <code>Bootstrap</code>, <code><a href="http://i18njs.com/" target="_blank">18njs</a></code>, <code>JSON</code>, <code>XML</code><br/>
-
+                Built with: <code>HTML</code>, <code>Bootstrap</code>, <code>Javascript</code>, <code><a href="http://i18njs.com/" target="_blank">18njs</a></code>, <code>JSON</code>, <code>XML</code>
             </p>
-            <p>*There is a link called <em>"Disabled"</em>. It doesn't mean anything except for just extra part of the content to translate.</p>
+            <p>
+                The <em>header</em> and <em>footer</em>, the main content in <em>Home</em> and the <em>posts</em> are separate pieces of XML code. There's <code>index.html</code> and <code>posts.html</code> in each language folder. The <code>index.html</code> in the root is to redirect to Home in <code>en/index.html</code> as the default. And translation data for each language is JSON and placed in each locale folder, like so:
+                <br/>
+                <img src="../img/xmlandi18n_screenshot.png" alt="folder structure screen shot"/>
+            </p>
+            <p>
+                For translating each individual <strong>word</strong> or <strong>phrase</strong> such as <em>name</em>, <em>link</em>, <em>title</em> and so on, an <code>i18n()</code> method from the library is used. For blog <strong>posts</strong> and long <strong>articles</strong> like this one, a single block of code separated by <code>lang</code> attribute is loaded and whole text is directly displayed instead.
+            </p>
+            <p>
+                Loading components is all <em>asynchronous</em>. To handle javascript not to execute the translation program until all the components are loaded, each <em>AJAX</em> function increments <code>componentsLoaded</code> by 1 using a <code>setter</code> of an object attached to html after its job is done; meanwhile the translation program replace an empty function in the <code>setter</code> which does nothing by default, with a new one to monitor whether the current number of components has reached the total number. When the condition is met, starts to translate.
+            </p>
+            <p><span class="text-muted">*There is a link called <em>"Disabled"</em> on the page. It doesn't mean anything except for just extra part of the content to translate.</span></p>
             <h4>Why XML</h4>
-            <p></p>
+            <p>
+                Although <code>JSON</code> seems to be the major data format far above <code>XML</code> as of 2020, if you were to write <strong>long articles</strong> without <em>CMS</em> (<em>Content Management System</em>) or directly put <strong>HTML elements</strong>, you'll likely want to <strong>indent</strong>. But JSON can't and it makes your code squeezed or dense which is hard to read; XML makes it much cleaner and easier <strong>for developers</strong> to read and thus, easier to maintain in case of that.
+                <br/>
+            </p>
+            <h4>One Big Drawback</h4>
+            <p>
+                This way, without something like <code>React</code>, all components need to be loaded by <code>Javascript</code> every time. If anything goes wrong with Javascript, almost any major content won't be shown. Obviously, with most content dependent on Javascript, it might not run as fast as most website with simple HTML pages.
+            </p>
             <h4>Why not React</h4>
-            <p>We can just use React.</p>
+            <p>
+                We can just use <code>React</code>. But React is a huge library with lots of <strong>modules</strong> and using it is also a lot of setups and programming (in my opinion). The structure of your repository will be <strong>complicated</strong>, takes <strong>much space</strong> while this has less than 1MB all along, and requires <strong>another type of sytax</strong>. Besides a React app needs to be built into a final product as an extra step. <span class="text-success">These problems really don't matter to the final product which users will see at all</span>, though in some cases where we want to build a simple lightweight website or blog which is not large scale but with multiple pages or even languages and the same parts, where we still don't need a library/framework, to avoid being <em>overkill</em> like <em>using jQuery to only select DOM elements</em> for example, this approach is also a fairly handy option.
+            </p>
         </div>
         <div class="article container mt-5">
             <h2>My personal thoughts</h2>
@@ -42,14 +61,14 @@
                 <strong>In conclusion</strong>, it's hard for me to tell whether <code>i18njs</code> is really useful for the kind of content this whole website has. For simply translating each single word, I could do the same thing without it.<br/>
                 But one of the useful features of the library is, using <em>"formats"</em> dependent on context.<br/>
                 Such as setting <em>"keys"</em> which are like variables you can later add words to them at translation so they're reusable for different translation.<br/>
-                And if <em>"context"</em> is set, when a target is male or female, changes the word <em>"he"</em> or <em>"she"</em>. Or when a number is singular, plural or null, changes the counting unit. And you can even make it a little more complicated (you can see the detail <a href="http://i18njs.com/" target="_blank">here</a>).<br/>
+                And if <em>"context"</em> is set, when a target is male or female, changes the word <em>"he"</em> or <em>"she"</em>. Or when a number is singular, plural or null, changes the counting unit. And you can even make it a little more complicated (you can find out more in <a href="http://i18njs.com/" target="_blank">the documentation</a>).<br/>
                 But in my opinion, we'll rarely encounter the needs for them unless we develop a huge application where we have a variety of dinamic content like user registration, comments, notification, etc.
             </p>
             <p>
                 For formatting <strong>dates</strong>, just use the <code>Date()</code> and <code>Intl.DateTimeFormat()</code> constructors and the <code>toLocaleDateString()</code> method in vanilla JS and no need for a library. It becomes difficult when you have to convert weekdays or months into the names from numeric values but JS date methods can help that well.
             </p>
             <p>
-                These are just my personal opinions written by who hasn't tried a ton of i18n libraries at the moment that can be very biased. But that's what I felt about the project this time.
+                These are just my personal opinions written by who hasn't tried a ton of i18n libraries at the moment that can be biased. But that's what I felt about the project this time.
             </p>
         </div>
         <div class="article container mt-5">

@@ -77,5 +77,5 @@ function checkComponents(){
             document.getElementsByTagName("body")[0].prepend(errorMeassage);
         }
         console.log("checking components timed out");
-    }, 5000);
+    }, 4000);
 }

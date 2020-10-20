@@ -26,10 +26,10 @@
             <h2>Technical Details</h2>
             <hr/>
             <p>
-                Built with: <code>HTML</code>, <code>Bootstrap</code>, <code>Javascript</code>, <code><a href="http://i18njs.com/" target="_blank">18njs</a></code>, <code>JSON</code>, <code>XML</code>
+                Built with: <code>HTML</code>, <code>Bootstrap</code> (<code>CSS</code>), <code>Javascript</code>, <code><a href="http://i18njs.com/" target="_blank">18njs</a></code>, <code>JSON</code>, <code>XML</code>
             </p>
             <p>
-                The <em>header</em> and <em>footer</em>, the main content in <em>Home</em> and the <em>posts</em> are separate pieces of XML code. There's <code>index.html</code> and <code>posts.html</code> in each language folder. The <code>index.html</code> in the root is to redirect to Home in <code>en/index.html</code> as the default. And translation data for each language is JSON and placed in each locale folder, like so:
+                The <em>header</em> and <em>footer</em>, the main content in <em>Home</em> and the <em>posts</em> are separate pieces of XML code. There's <code>index.html</code> and <code>posts.html</code> in each language folder. The <code>index.html</code> in the root is to redirect to Home in <code>en/index.html</code> as the default. And translation data for each language is <code>JSON</code> and placed in each locale folder, like so:
                 <br/>
                 <img src="../img/xmlandi18n_screenshot.png" alt="folder structure screen shot"/>
             </p>
@@ -37,12 +37,12 @@
                 For translating each individual <strong>word</strong> or <strong>phrase</strong> such as <em>name</em>, <em>link</em>, <em>title</em> and so on, an <code>i18n()</code> method from the library is used. For blog <strong>posts</strong> and long <strong>articles</strong> like this one, a single block of code separated by <code>lang</code> attribute is loaded and whole text is directly displayed instead.
             </p>
             <p>
-                Loading components is all <em>asynchronous</em>. To handle javascript not to execute the translation program until all the components are loaded, each <em>AJAX</em> function for a component increments <code>componentsLoaded</code> by <code>1</code> using a <code>setter</code> of an object attached to HTML after its job is done; meanwhile the translation program replaces an empty function in the <code>setter</code> which does nothing by default, with a new one to monitor whether the current number of components has reached the total number. When the condition is met, starts to translate.
+                Loading components is all <em>asynchronous</em>. To handle javascript not to execute the translation program until all the components are loaded, each <em>AJAX</em> function for a component increments <code>componentsLoaded</code> by <code>1</code> using a <code>setter</code> of an object attached to HTML after its job is done; meanwhile the translation program replaces an empty function in the <code>setter</code> which does nothing by default, with a new one to monitor whether the current number of components has reached the total number, and adds <code>0</code> to <code>componentsLoaded</code> just to check the number at the time. When the condition is met, starts to translate.
             </p>
             <p><span class="text-muted">*There is a link called <em>"Disabled"</em> on the page. It doesn't mean anything except for just extra part of the content to translate.</span></p>
             <h4>Why XML</h4>
             <p>
-                Although <code>JSON</code> seems to be the major data format far above <code>XML</code> as of 2020, if you were to write <strong>long articles</strong> without <em>CMS</em> (<em>Content Management System</em>) or directly put <strong>HTML elements</strong>, you'll likely want to <strong>indent</strong>. But JSON can't and it makes your code squeezed or dense which is hard to read; XML makes it much cleaner and easier <strong>for developers</strong> to read and thus, easier to maintain in that case.
+                Although <code>JSON</code> seems to be the major data format far beyond <code>XML</code> as of 2020, if you were to write <strong>long articles</strong> without <em>CMS</em> (<em>Content Management System</em>) or directly put <strong>HTML elements</strong>, you'll likely want to <strong>indent</strong>. But JSON can't and it makes your code squeezed or dense which is hard to read; XML makes it much cleaner and easier <strong>for developers</strong> to read and thus, easier to maintain in that case.
                 <br/>
             </p>
             <h4>One Big Drawback</h4>
@@ -51,7 +51,11 @@
             </p>
             <h4>Why not React</h4>
             <p>
-                We can just use <code>React</code>. But React is a huge library with lots of <strong>modules</strong> and using it is also a lot of setups and programming (in my opinion). The structure of your repository will be <strong>complicated</strong>, takes <strong>much space</strong> while this has less than 1MB all along, and requires <strong>another type of sytax</strong>. Besides a React app needs to be built into a final product as an extra step. <span class="text-success">These problems really don't matter to the final product which users will see at all</span>, though in some cases where we want to build a simple lightweight website or blog which is not large scale but with multiple pages or even languages and the same parts, where we still don't need a library/framework, to avoid being <strong>overkill</strong> like <em>"using jQuery to only select DOM elements"</em> for example, this approach is also a fairly handy option.
+                We can just use <code>React</code> if we want. But React is a huge library with lots of <strong>modules</strong> and using it is also a lot of setups and programming (in my opinion). The structure of your repository will be <strong>complicated</strong>, takes <strong>much space</strong> while this one has less than 1MB all along, and React requires <strong>another style of coding</strong>—<em>React components and JSX</em>. Besides a React app needs to be built into a final product as an extra step.
+                <br/>
+                <span class="text-success">These problems really don't matter to the final product which users will see at all</span>, though in some cases where we want to build a simple and lightweight website or blog which is not large scale but with multiple pages or even languages and has the same parts in them, while we don't want to take so much space for a repository in our local storage, we might just want to quickly get started but still want to keep HTML and the parts of content better organized and maintainable without a need for a library/framework.
+                <br/>
+                To avoid being <strong>overkill</strong> like <em>"using jQuery to only select DOM elements"</em> for example, this website's approach is also a fairly handy option.
             </p>
         </div>
         <div class="article container mt-5">

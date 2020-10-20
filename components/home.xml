@@ -8,14 +8,57 @@
         <div class="article container mt-5">
             <h2>Welcome</h2>
             <hr/>
-            <p>This is a mock website built as my personal project.<br/>
-            It is focused on<em>i18n (Internationalization)</em> with the help of a library <code>i18njs</code>.
+            <p>
+                This is a mock website built as my personal project.<br/>
+                It is focused on <em>i18n (Internationalization)</em> with the help of a library <code>i18njs</code>, and using <em>XML</em> for components of the website to make it more efficient to reuse and maintain contents with vanilla <em>Javascript</em>.
+            </p>
+            <h4>Features</h4>
+            <p>
+                There is a <code>Home</code> page and a <code>Posts</code> page in the website. You can navigate to each page via the navigation bar above.<br/>
+                Use the links in the navigation bar to switch the language.<br/>
+                All of <em>target</em> words are translated into the corresponding language including posts in the Posts page and <code>the clock</code> at the top.<br/>
+                <span class="text-muted">*Note, <em>Date</em> is a target in this case but not <em>Home</em>. It is not really necessary and not always the case because of cultural reasons.</span><br/>
+                Supported languages: <code>English</code> and <code>Japanese</code>
+            </p>
+            <p>The posts are just a bunch of example sentences.</p>
+        </div>
+        <div class="article container mt-5">
+            <h2>Technical Details</h2>
+            <hr/>
+            <p>
+                Built with: <code>HTML</code>, <code>Bootstrap</code>, <code><a href="http://i18njs.com/" target="_blank">18njs</a></code>, <code>JSON</code>, <code>XML</code><br/>
+
+            </p>
+            <p>*There is a link called <em>"Disabled"</em>. It doesn't mean anything except for just extra part of the content to translate.</p>
+            <h4>Why XML</h4>
+            <p></p>
+            <h4>Why not React</h4>
+            <p>We can just use React.</p>
+        </div>
+        <div class="article container mt-5">
+            <h2>My personal thoughts</h2>
+            <hr/>
+            <p>
+                <strong>In conclusion</strong>, it's hard for me to tell whether <code>i18njs</code> is really useful for the kind of content this whole website has. For simply translating each single word, I could do the same thing without it.<br/>
+                But one of the useful features of the library is, using <em>"formats"</em> dependent on context.<br/>
+                Such as setting <em>"keys"</em> which are like variables you can later add words to them at translation so they're reusable for different translation.<br/>
+                And if <em>"context"</em> is set, when a target is male or female, changes the word <em>"he"</em> or <em>"she"</em>. Or when a number is singular, plural or null, changes the counting unit. And you can even make it a little more complicated (you can see the detail <a href="http://i18njs.com/" target="_blank">here</a>).<br/>
+                But in my opinion, we'll rarely encounter the needs for them unless we develop a huge application where we have a variety of dinamic content like user registration, comments, notification, etc.
+            </p>
+            <p>
+                For formatting <strong>dates</strong>, just use the <code>Date()</code> and <code>Intl.DateTimeFormat()</code> constructors and the <code>toLocaleDateString()</code> method in vanilla JS and no need for a library. It becomes difficult when you have to convert weekdays or months into the names from numeric values but JS date methods can help that well.
+            </p>
+            <p>
+                These are just my personal opinions written by who hasn't tried a ton of i18n libraries at the moment that can be very biased. But that's what I felt about the project this time.
             </p>
         </div>
         <div class="article container mt-5">
-            <h2>Technical Detail</h2>
+            <h2>Thanks for visiting us</h2>
             <hr/>
-            <p>Built with: <code>Bootstrap</code>, <code>18njs</code>, <code>XML</code></p>
+            <p>
+                Author: Tomoaki Morioka<br/>
+                Project Started: Oct, 2020
+            </p>
         </div>
         <div class="container">
             <hr/>

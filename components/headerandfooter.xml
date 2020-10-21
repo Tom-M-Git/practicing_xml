@@ -35,8 +35,11 @@
             </ul>
         </nav>
     </header>
-    <footer class="bg-dark mt-5 py-3" style="min-height:10rem">
-        <div class="container text-light text-center">
+    <footer class="bg-dark mt-5 py-3 d-flex flex-column align-items-center justify-content-around" style="min-height:10rem">
+        <div class="">
+            <a href="https://github.com/Tom-M-Git" target="_blank"><img src="../img/github-square.svg" alt="github profile" style="width:2.5rem;filter:invert(1);opacity:0.7" /></a>
+        </div>
+        <div class="text-light">
             <p>&#169; 2020 by <span data-i18n="Tomoaki Morioka">Tomoaki Morioka</span>—Japan. All Rights Reserved.</p>
         </div>
     </footer>

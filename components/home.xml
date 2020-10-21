@@ -47,7 +47,7 @@
             </p>
             <h4>One Big Drawback</h4>
             <p>
-                This way, without something like <code>React</code>, all components need to be loaded by <code>Javascript</code> every time. If anything goes wrong with Javascript, almost any major content won't be shown. Obviously, with most content dependent on Javascript, it might not run as fast as most website with simple HTML pages.
+                This way, all components need to be loaded with <code>HTTP Request</code> every time. If anything goes wrong with HTTP Request, almost any major content won't be shown. Obviously, with most content dependent on external files, it might not run as fast as most website with simple HTML pages.
             </p>
             <h4>Why not React</h4>
             <p>
@@ -85,7 +85,7 @@
         </div>
         <div class="container">
             <hr/>
-            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-20">Oct 20, 2020</span>
+            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-21">Oct 21, 2020</span>
         </div>
     </main>
     <main lang="ja">
@@ -134,7 +134,7 @@
             </p>
             <h4>一つ大きな欠点が</h4>
             <p>
-                <code>React</code>のようなものではなくこの方法だと、全てのコンポーネントは毎回、<code>Javascript</code>によって読み込まれなければなりません。Javascriptに何らかの不具合でも起きれば、主要なコンテンツの殆どが表示されないでしょう。当然ですが、殆どのコンテンツがJavascriptに依存する場合、シンプルなHTMLページで出来たウェブサイトの大半ほど快速ではない可能性があります。
+                この方法だと、全てのコンポーネントは毎回、<code>HTTP Request</code>によって読み込まれなければなりません。HTTP Requestに何らかの不具合でも起きれば、主要なコンテンツの殆どが表示されないでしょう。当然ですが、殆どのコンテンツが外部のファイルに依存する場合、シンプルなHTMLページで出来たウェブサイトの大半ほど快速ではない可能性があります。
             </p>
             <h4>なぜReactではないのか</h4>
             <p>
@@ -172,7 +172,7 @@
         </div>
         <div class="container">
             <hr/>
-            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-20">Oct 20, 2020</span>
+            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-21">Oct 21, 2020</span>
         </div>
     </main>
 </components>

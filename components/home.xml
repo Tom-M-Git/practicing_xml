@@ -16,11 +16,11 @@
             <p>
                 There is a <code>Home</code> page and a <code>Posts</code> page in the website. You can navigate to each page via the navigation bar above.<br/>
                 Use the links in the navigation bar to switch the language.<br/>
-                All of <em>target</em> words are translated into the corresponding language including posts in the Posts page and <code>the clock</code> at the top.<br/>
+                All of <em>target</em> words in content including posts in the Posts page and <code>the clock</code> at the top are translated into the corresponding language.<br/>
                 <span class="text-muted">*Note, <em>Date</em> is a target in this case but not <em>Home</em>. It is not really necessary and not always the case because of cultural reasons.</span><br/>
                 Supported languages: <code>English</code> and <code>Japanese</code>
             </p>
-            <p>The posts are just a bunch of example sentences.</p>
+            <p>The posts are just a number of example sentences.</p>
         </div>
         <div class="article container mt-5">
             <h2>Technical Details</h2>
@@ -37,7 +37,7 @@
                 For translating each individual <strong>word</strong> or <strong>phrase</strong> such as <em>name</em>, <em>link</em>, <em>title</em> and so on, an <code>i18n()</code> method from the library is used. For blog <strong>posts</strong> and long <strong>articles</strong> like this one, a single block of code separated by <code>lang</code> attribute is loaded and whole text is directly displayed instead.
             </p>
             <p>
-                Loading components is all <em>asynchronous</em>. To handle javascript not to execute the translation program until all the components are loaded, each <em>AJAX</em> function for a component increments <code>componentsLoaded</code> by <code>1</code> using a <code>setter</code> of an object attached to HTML after its job is done; meanwhile the translation program replaces an empty function in the <code>setter</code> which does nothing by default, with a new one to monitor whether the current number of components has reached the total number, and adds <code>0</code> to <code>componentsLoaded</code> just to check the number at the time. When the condition is met, starts to translate.
+                Loading components is all <em>asynchronous</em>. To handle Javascript not to execute the translation program until all the components are loaded, each <em>AJAX</em> function for a component increments <code>componentsLoaded</code> by <code>1</code> using a <code>setter</code> of an object embedded to HTML after its job is done; meanwhile the translation program replaces an empty function in the <code>setter</code> which does nothing by default, with a new one to monitor whether the current number of components has reached the total number, and adds <code>0</code> to <code>componentsLoaded</code> just to check the number at the time. When the condition is met, starts to translate.
             </p>
             <p><span class="text-muted">*There is a link called <em>"Disabled"</em> on the page. It doesn't mean anything except for just extra part of the content to translate.</span></p>
             <h4>Why XML</h4>
@@ -53,7 +53,7 @@
             <p>
                 We can just use <code>React</code> if we want. But React is a huge library with lots of <strong>modules</strong> and using it is also a lot of setups and programming (in my opinion). The structure of your repository will be <strong>complicated</strong>, takes <strong>much space</strong> while this one has less than 1MB all along, and React requires <strong>another style of coding</strong>—<em>React components and JSX</em>. Besides a React app needs to be built into a final product as an extra step.
                 <br/>
-                <span class="text-success">These problems really don't matter to the final product which users will see at all</span>, though in some cases where we want to build a simple and lightweight website or blog which is not large scale but with multiple pages or even languages and has the same parts in them, while we don't want to take so much space for a repository in our local storage, we might just want to quickly get started but still want to keep HTML and the parts of content better organized and maintainable without a need for a library/framework.
+                <span class="text-success">These problems really don't matter to the final product which users will see at all</span> as far as I know, though in some cases where we want to build a simple and lightweight website or blog which is not large scale but with multiple pages or even languages and has the same parts in them, while we don't want to take so much space for a repository in our local storage, we might just want to quickly get started but still want to keep HTML and the parts of content better organized and maintainable without a need for a library/framework.
                 <br/>
                 To avoid being <strong>overkill</strong> like <em>"using jQuery to only select DOM elements"</em> for example, this website's approach is also a fairly handy option.
             </p>
@@ -64,7 +64,7 @@
             <p>
                 <strong>In conclusion</strong>, it's hard for me to tell whether <code>i18njs</code> is really useful for the kind of content this whole website has. For simply translating each single word, I could do the same thing without it.<br/>
                 But one of the useful features of the library is, using <em>"formats"</em> dependent on context.<br/>
-                Such as setting <em>"keys"</em> which are like variables you can later add words to them at translation so they're reusable for different translation.<br/>
+                Such as setting <em>"keys"</em> which are like variables you can later add arbitrary words to them at translation so they're reusable for different translation.<br/>
                 And if <em>"context"</em> is set, when a target is male or female, changes the word <em>"he"</em> or <em>"she"</em>. Or when a number is singular, plural or null, changes the counting unit. And you can even make it a little more complicated (you can find out more in <a href="http://i18njs.com/" target="_blank">the documentation</a>).<br/>
                 But in my opinion, we'll rarely encounter the needs for them unless we develop a huge application where we have a variety of dinamic content like user registration, comments, notification, etc.
             </p>
@@ -92,16 +92,87 @@
         <div id="about-header" class="container bg-light border-top border-bottom">
             <h1 class="my-1">概要</h1>
         </div>
-        <div id="article" class="container mt-5">
+        <div class="article container mt-5">
             <h2>ようこそ</h2>
             <hr/>
-            <p>This is a mock website built as my personal project.<br/>
-            It is focused on <em>i18n (Internationalization)</em> with the help of a library <code>i18njs</code>.
+            <p>
+                これは著者の個人的なプロジェクトとして制作された模擬ウェブサイトです。<br/>
+                本サイトはライブラリー｢<code>i18njs</code>｣を活用した<em>i18n(インターナショナライゼーション)</em>と、 拡張機能無しの<em>Javascript</em>でコンテンツをより効率的に使い回すまたは維持するために、サイトのコンポーネントに<em>XML</em>を使う、ということに焦点を当てています。
+            </p>
+            <h4>特徴</h4>
+            <p>
+                本サイトには<code>HOME</code>と<code>記事</code>のページがあります。ナビゲーションバーからそれぞれのページに移動できます。<br/>
+                ナビゲーションバーのリンクから言語を切り替えられます。<br/>
+                記事のページにある記事や上部にある<code>時計</code>のコンテンツを含め、<em>対象</em>になる言葉は全て対応する言語に翻訳されます。<br/>
+                <span class="text-muted">※注記: 本サイトの場合<em>Date</em>は日本語への翻訳の対象ですが<em>Home</em>は対象になっていません。文化的にこれは絶対ではない上、常にそうとは限りません。</span><br/>
+                サポートされている言語: <code>英語</code>, <code>日本語</code>
+            </p>
+            <p>記事のページには複数の例文が並べられているだけです。</p>
+        </div>
+        <div class="article container mt-5">
+            <h2>技術的詳細</h2>
+            <hr/>
+            <p>
+                テクノロジー: <code>HTML</code>, <code>Bootstrap</code> (<code>CSS</code>), <code>Javascript</code>, <code><a href="http://i18njs.com/" target="_blank">18njs</a></code>, <code>JSON</code>, <code>XML</code>
+            </p>
+            <p>
+                <em>ヘッダー</em>と<em>フッター</em>のセット、<em>HOME</em>にあるメインコンテンツや<em>記事</em>は別々のXMLコードです。<code>index.html</code>と<code>posts.html</code>がそれぞれの言語フォルダにあります。ルートにある<code>index.html</code>は、<code>en/index.html</code>のHomeにデフォルトとしてリダイレクトするためです。それぞれの言語の翻訳データは<code>JSON</code>で書かれており、それぞれのロケールのフォルダにあります。以下の通り:
+                <br/>
+                <img src="../img/xmlandi18n_screenshot.png" alt="folder structure screen shot"/>
+            </p>
+            <p>
+                <em>名前</em>、<em>リンク</em>、<em>タイトル</em>などの個別の<strong>単語</strong>や<strong>フレーズ</strong>を翻訳する際は、ライブラリーにある<code>i18n()</code>メソッドを使用しました。ブログの<strong>投稿</strong>やこのように長い<strong>記事</strong>の翻訳には、代わりに<code>lang</code>属性によって区別されたひとかたまりのコードが読み込まれ、全文が直接表示されます。
+            </p>
+            <p>
+                コンポーネントの読み込みは全て<em>非同時性(asynchronous)</em>です。全てのコンポーネントが読み込まれるまでJavascriptに翻訳プログラムを開始させないようにするには、コンポーネントを読み込むための<em>AJAX</em>ファンクションが、それぞれ役目を終えた後にオブジェクトの<code>セッター(setter)</code>を使用して<code>componentsLoaded</code>を<code>1</code>ずつ増加させます。オブジェクトはHTMLに埋め込まれています。一方で翻訳プログラムが<code>セッター(setter)</code>にある、初期状態では何もしない空のファンクションを新しいものと入れ替え、現在のコンポーネントの数が合計に達したかをモニターします。直後に<code>0</code>を<code>componentsLoaded</code>に加え、数をチェックします。条件がそろった時点で、翻訳を開始します。
+            </p>
+            <p><span class="text-muted">※<em>"使用不可"</em>と書かれたリンクがページにありますが、翻訳のためのおまけのコンテンツである意外に、特にこれといった理由はありません。</span></p>
+            <h4>なぜXMLなのか</h4>
+            <p>
+                2020年時点で、<code>JSON</code>の方が<code>XML</code>に比べ圧倒的にメジャーなデータ形式であるように思われますが、<em>CMS</em> (<em>コンテンツマネジメントシステム</em>)無しで<strong>長い記事</strong>を書く、または直接<strong>HTML要素を</strong>書き込む場合、おそらく<strong>インデント</strong>が欠かせないでしょう。しかしJSONではインデントができずにコードがギュッと密集して読みづらくなります。その場合はXMLの方がコードがきれいになるので、<strong>開発者にとって</strong>読みやすくなり、管理または維持しやすくなります。
+                <br/>
+            </p>
+            <h4>一つ大きな欠点が</h4>
+            <p>
+                <code>React</code>のようなものではなくこの方法だと、全てのコンポーネントは毎回、<code>Javascript</code>によって読み込まれなければなりません。Javascriptに何らかの不具合でも起きれば、主要なコンテンツの殆どが表示されないでしょう。当然ですが、殆どのコンテンツがJavascriptに依存する場合、シンプルなHTMLページで出来たウェブサイトの大半ほど快速ではない可能性があります。
+            </p>
+            <h4>なぜReactではないのか</h4>
+            <p>
+                <code>React</code>を使いたい場合、使えば良いのです。しかしReactは大量の<strong>モジュール</strong>を用いた巨大なライブラリーで、それを使う場合は(個人的な感想では)多くのセットアップとプログラミングを行うことになります。レポジトリの構造は<strong>複雑</strong>になり、このサイトは1MBも使用しない一方でReactは<strong>多くの容量</strong>を必要とする上、<strong>違う形式のコードの書き方</strong>まで必要とします(<em>ReactコンポーネントとJSX</em>)。 その上、Reactアプリの最終プロダクトをビルドするといった追加の手順をとらなければなりません。
+                <br/>
+                <span class="text-success">著者が知る限り、これらの問題点はユーザーが閲覧する最終プロダクトには全く悪影響はありません。</span>が、シンプルかつ軽量なウェブサイトまたはブログを制作したい時、例えばサイトのスケールは大きくないが複数のページまたは言語が使われ、同じパーツが使われるとします。同時にレポジトリのためにローカルストレージの容量をそれほどとりたくない場合は、とりあえず手早く作業を開始したいが、ライブラリー/フレームワーク無しでもHTMLやコンテンツのパーツは整理されていて、管理または維持しやすい状態を保ちたいところです。
+                <br/>
+                例として、<em>"DOM要素を選択するためだけにjQueryを使う"</em>といったようないわゆる<strong>やり過ぎ</strong>を避けるために、このウェブサイトのアプローチもそこそこ、手軽な選択肢ではあります。
+            </p>
+        </div>
+        <div class="article container mt-5">
+            <h2>個人的な見解</h2>
+            <hr/>
+            <p>
+                <strong>結論として</strong>、<code>i18njs</code>が本サイトにあるようなコンテンツに対して便利だと言い切ることはできません。単に単語を翻訳するためなら、ライブラリー無しでも出来たかもしれません。<br/>
+                但しそのライブラリーの便利な使い方の一つとして、文脈や状況に応じて<em>"フォーマット"</em>を使うということがあります。<br/>
+                例えば変数のような<em>"キー"</em>を設定し、翻訳時に任意の単語を追加できるようにすることで、別の翻訳で再利用ができます。<br/>
+                また、<em>"context"</em>が設定されると、ターゲットが男性または女性の場合に人称代名詞を変えたり、数が単数または複数、あるいは無効の場合に単位を変えたりすることができますが、さらに複雑な処理をすることも可能です(詳細は<a href="http://i18njs.com/" target="_blank">ドキュメンテーション</a>で確認できます)。<br/>
+                ただし個人的には、そのような機能の必要性は、例としてユーザー登録、コメント、通知などの動的なコンテンツが使われる巨大なアプリケーションを開発しない限りは、滅多に無いのではないかと思います。
+            </p>
+            <p>
+                <strong>日付</strong>をフォーマットすることについては、ライブラリーでなくても<code>Date()</code>コンストラクターと<code>Intl.DateTimeFormat()</code>コンストラクターと<code>toLocaleDateString()</code>メソッドをバニラJSで使えば良いです。数値から週や月の名前に変換ことはJSのDateメソッドでは上手くできますが、それ無しでは難しいからです。
+            </p>
+            <p>
+                これらは、多くのi18nライブラリーを試したわけでは無い著者の個人的な意見でしかなく、偏っている可能性があります。ですがこれが今回のプロジェクトに対して感じたことでした。
+            </p>
+        </div>
+        <div class="article container mt-5">
+            <h2>ご覧頂き有り難うございます</h2>
+            <hr/>
+            <p>
+                著者: 森岡 知映<br/>
+                プロジェクト開始: 2020年10月
             </p>
         </div>
         <div class="container">
             <hr/>
-            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-18">Oct 18, 2020</span>
+            <span data-i18n="last-modified">Last Modified</span>: <span data-i18n-date="2020-10-20">Oct 20, 2020</span>
         </div>
     </main>
 </components>

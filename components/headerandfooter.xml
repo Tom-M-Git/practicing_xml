@@ -18,7 +18,7 @@
                 <h1 class="display-4"><span class="font-weight-bolder" data-i18n="title">Web Components with XML and i18n</span></h1>
                 <p class="lead"><span data-i18n="subtitle">A mock website project</span></p>
             </div>
-            <div class="mx-auto w-75 bg-light d-flex flex-wrap justify-content-center shadow text-nowrap rounded-pill py-2 px-3" style="position:relative;max-width:550px">
+            <div class="mx-auto w-75 bg-light d-flex flex-wrap justify-content-center shadow text-nowrap rounded-pill py-2 px-3" style="position:relative;max-width:550px;min-width:350px">
                 <div class="mr-1"><span class="text-muted" data-i18n="current-date-and-time">Current Date and Time:</span></div>
                 <div><span class="text-info" id="date-and-time"></span></div>
             </div>

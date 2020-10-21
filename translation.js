@@ -23,7 +23,7 @@ httpRequest("GET", JsonOfLocale);
 /* -------------------- */
 /* Setting i18njs */
 function bulkTranslateFunc (passedElementsToTranslate) {
-    console.log(passedElementsToTranslate.length); console.log(passedElementsToTranslate);
+    // console.log(passedElementsToTranslate.length); console.log(passedElementsToTranslate);
     let addedData, keys, i18nKeys;
     if(jsonData){
         addedData = jsonData;

@@ -17,7 +17,7 @@ function postsCode(){
         const langAttr = document.getElementsByTagName("html")[0].getAttribute("lang");
         let postOutput="", gotPosts, dateAttr, authorAttr, gotItem, gotTitle, gotBody, formattedDateAttr;
         gotPosts = xhr.responseXML.querySelectorAll("post");
-        console.log(gotPosts);
+        
         gotPosts.forEach((eachPost)=>{
             dateAttr = eachPost.getAttribute("date");
             authorAttr = eachPost.getAttribute("author");
@@ -25,7 +25,6 @@ function postsCode(){
             gotTitle = gotItem.querySelector("title").innerHTML;
             gotBody = gotItem.querySelector("body").innerHTML;
             formattedDateAttr = new Date(dateAttr).toLocaleDateString(langAttr, {year:"numeric", month:"short", day:"numeric"});
-            console.log(gotItem);console.log(gotTitle);console.log(gotBody);console.log(formattedDateAttr);
 
             postOutput += `
                 <article class="post mt-5">

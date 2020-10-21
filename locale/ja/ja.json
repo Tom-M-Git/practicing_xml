@@ -1,5 +1,7 @@
 {
     "values":{
+        "home-and-title":"HOME | XMLコンポーネントとi18n",
+        "posts-and-title":"記事 | XMLコンポーネントとi18n",
         "title":"XMLコンポーネントとi18n",
         "header":"ヘッダー",
         "footer":"フッター",
